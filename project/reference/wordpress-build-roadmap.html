@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>从域名到 WordPress 上线：项目检查表</title>
+  <style>
+    :root { color-scheme: light; --ink:#17201b; --muted:#5b685f; --line:#dce5df; --paper:#fbfcf9; --green:#146b46; --wash:#eef6f1; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:#e9eee9; color:var(--ink); font:16px/1.65 system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif; }
+    main { width:min(900px,calc(100% - 32px)); margin:32px auto; padding:clamp(24px,5vw,64px); background:var(--paper); box-shadow:0 12px 40px rgba(28,48,36,.10); }
+    h1 { margin:0 0 8px; font:700 clamp(30px,5vw,48px)/1.12 Georgia,"Noto Serif SC",serif; }
+    .deck { color:var(--muted); font-size:18px; margin:0 0 36px; }
+    .flow { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin:28px 0 38px; }
+    .flow div { padding:14px; background:var(--wash); border-top:3px solid var(--green); }
+    .flow b,.flow span { display:block; }
+    .flow span { color:var(--muted); font-size:13px; }
+    h2 { margin:34px 0 12px; font-size:22px; }
+    ol { padding-left:24px; }
+    li { margin:10px 0; }
+    code { background:#edf1ed; padding:2px 6px; border-radius:4px; }
+    .gate { border:1px solid var(--line); padding:18px 20px; margin:24px 0; }
+    .status { color:var(--green); font-weight:700; }
+    footer { border-top:1px solid var(--line); margin-top:40px; padding-top:18px; color:var(--muted); font-size:14px; }
+    @media (max-width:700px) { .flow { grid-template-columns:1fr 1fr; } main { margin:0 auto; width:100%; box-shadow:none; } }
+    @media print { body { background:white; } main { width:100%; margin:0; box-shadow:none; } }
+  </style>
+</head>
+<body>
+<main>
+  <p class="status">快速参考 · 2026-08-10</p>
+  <h1>从域名到 WordPress 上线</h1>
+  <p class="deck">域名只是地址。网站还需要主机、WordPress、内容与上线验证。</p>
+
+  <section class="flow" aria-label="建站流程">
+    <div><b>1 域名</b><span>网站地址</span></div>
+    <div><b>2 主机</b><span>网站运行空间</span></div>
+    <div><b>3 WordPress</b><span>内容与页面系统</span></div>
+    <div><b>4 DNS</b><span>把地址指向主机</span></div>
+  </section>
+
+  <h2>建设顺序</h2>
+  <ol>
+    <li><strong>确认业务与页面范围：</strong>先确定首发语言、公开服务、询盘字段和品牌方向。</li>
+    <li><strong>选择主机：</strong>比较成本、访问地区、备份、测试站、迁移能力和技术支持。</li>
+    <li><strong>建立测试环境：</strong>先在暂存站完成 WordPress 安装，正式域名暂不切换。</li>
+    <li><strong>视觉概念确认：</strong>先看整页或分区设计，再进入正式页面开发。</li>
+    <li><strong>实现内容模型与页面：</strong>搭建首页、目的地、指南、路线、服务说明和询盘入口。</li>
+    <li><strong>接入表单和多语言基础：</strong>验证国家区号、错误提示、提交成功和线索去向。</li>
+    <li><strong>上线前 QA：</strong>检查手机端、可访问性、性能、安全、SEO、隐私、备份与恢复。</li>
+    <li><strong>连接正式域名：</strong>确认邮件 DNS 不受影响后，再修改 DNS 并启用 HTTPS。</li>
+  </ol>
+
+  <div class="gate">
+    <strong>购买主机前的最低检查：</strong><br>
+    当前 WordPress 官方建议主机支持 PHP 8.3+、MariaDB 10.11+ 或 MySQL 8.0+，并为每个安装启用 HTTPS。项目还应额外要求可导出、SFTP/SSH 或等效文件访问、数据库访问、自动备份与可验证恢复。
+  </div>
+
+  <h2>你与 Codex 的分工</h2>
+  <p><strong>你负责：</strong>业务取舍、预算、账户所有权、品牌与公开承诺的最终确认。</p>
+  <p><strong>Codex 负责：</strong>研究对比、解释风险、制定结构、生成视觉概念、开发主题或功能、准备部署、执行技术检查并形成维护说明。</p>
+  <p><strong>安全边界：</strong>不要把密码、支付信息或密钥发进项目文件。需要登录时优先由你在浏览器中登录，再由 Codex 在已登录状态下协助；改 DNS、购买服务和上线前会再次明确确认。</p>
+
+  <footer>
+    主要来源：<a href="https://wordpress.org/about/requirements/">WordPress Requirements</a> ·
+    <a href="https://wordpress.org/documentation/article/get-started-with-wordpress/">Get started with WordPress</a> ·
+    <a href="https://developer.wordpress.org/advanced-administration/security/backup/">WordPress Backups</a><br>
+    有任何不清楚的地方，直接继续问 Codex；下一步通常是主机选型。
+  </footer>
+</main>
+</body>
+</html>
