@@ -2,6 +2,13 @@
 
 核验日期：2026-09-22
 
+## 已完成位置
+
+- GitHub Private：`https://github.com/TOBlrama/chinaworthseeing`
+- U 盘：`F:\think book备份\ChinaWorthSeeing-2026-09-22`
+- GitHub 默认分支：`main`
+- GitHub 初始完整提交：`665b2878a0395bbbedb1354506e4ae619a501e34`
+
 ## GitHub Private 安全副本
 
 仓库目录为 `graduation-source/`，计划上传以下内容：
@@ -48,3 +55,13 @@ Cloudways 完整归档已再次核验：
 离线副本不能直接推送到 GitHub，也不要通过公共网盘分享。换机后不要原样复用旧 SMTP/API Key；先在对应服务商处确认是否仍有效，优先重新生成并撤销旧凭据。
 
 浏览器保存的 GitHub、InfinityFree、WordPress、Cloudflare/域名和邮箱登录状态不属于项目文件。换机前应确认这些账号已经进入自己的密码管理器，并确认两步验证恢复方式可用。
+
+## U 盘复制验证
+
+首次完整复制后核验结果：
+
+- 工作区：源和 U 盘均为 16,937 个文件、1,058,636,335 bytes。
+- D 盘旧站：源和 U 盘均为 7,211 个文件、292,609,478 bytes。
+- Cloudways 完整归档、Cloudways SQL、本地 SQLite、D 盘 SQLite 和离线 Git bundle 的源/目标 SHA-256 均一致。
+- U 盘中的脱敏恢复包与原始图片 SHA-256 清单通过。
+- U 盘中的 Git bundle 记录完整提交历史，并可在 GitHub 不可用时恢复。

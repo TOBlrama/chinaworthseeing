@@ -248,6 +248,7 @@
 - GitHub 边界：私有仓库收录项目文档、自定义 WordPress 源码、设计资源、原始图片素材和已经审查的脱敏网站恢复包；不提交 `.env`、`wp-config.php`、真实数据库、旧询盘、后台账号、SMTP/Turnstile/API 凭据、完整运营归档或私钥。
 - 离线边界：U 盘副本保留完整工作区、原始 D 盘 WordPress 站点及图片、Cloudways 完整归档、SQL、SQLite 和本地配置，用于灾难恢复。该副本含账号配置和潜在个人数据，必须视为敏感资料，不得直接上传或共享。
 - 恢复目标：GitHub 克隆后可以继续源码、内容结构和设计工作，也可用脱敏恢复包重建当前公开展示站；未来正式运营恢复须使用离线完整归档，并重新配置数据库凭据、邮件、Turnstile、DNS、SSL 和端到端询盘测试。
+- 实施结果：GitHub Private 仓库已建立并上传到 `https://github.com/TOBlrama/chinaworthseeing`；仓库包含项目源码、文档、设计稿、原始图片及脱敏恢复包。完整离线副本已写入 `F:\think book备份\ChinaWorthSeeing-2026-09-22`，工作区与 D 盘旧站的文件数和总字节均与源一致，五项关键恢复文件 SHA-256 一致，离线 Git bundle 验证为完整历史。
 
 ## 待确认
 
